@@ -41,7 +41,11 @@ int main(int argc, char *argv[])
 		exit(-1);
 	}
 	
-	listen(sockfd, 5);
+	if (listen(sockfd, 5) == -1) {
+		fprintf(stderr,"ERROR on listening.\n");
+		exit(-1);
+	}
+	
 	
 	clilen = sizeof(struct sockaddr_in);
 

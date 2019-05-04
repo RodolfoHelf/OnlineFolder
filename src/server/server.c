@@ -83,19 +83,12 @@ void *handleConnection(void *socketDescriptor) {
     char pathServerToClient[30] = "../client/";
     pthread_t thread_id;
 
-    //TODO: Receives username from client
-
-    //TODO: get_sync_dir, creates directory, if not created
-
     //TODO: Create here new thread to watch folder
-    // Inotify?
-    //
-
+   
     //TODO: Thread to receive updates from client
 
-    //TODO: Linked list to link logged in clients
-
     /*************************************/
+    
     //Reads the client name and update/search on the client list.
     bzero(buffer, PACKET_SIZE);
     idUserName = read(newsockfd,buffer,PACKET_SIZE);
